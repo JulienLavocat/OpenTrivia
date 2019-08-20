@@ -1,0 +1,33 @@
+{
+  "name": "opentrivia",
+  "version": "0.0.0",
+  "description": "Promise-based OpenTriviaDB (https://opentdb.com/) client",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "publish": "npm publish --registry https://registry.npmjs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienLavocat/OpenTrivia.git"
+  },
+  "keywords": [
+    "trivia",
+    "client",
+    "db",
+    "opentrivia",
+    "open"
+  ],
+  "author": "Julien Lavocat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JulienLavocat/OpenTrivia/issues"
+  },
+  "homepage": "https://github.com/JulienLavocat/OpenTrivia#readme",
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "axios": "^0.19.0"
+  }
+}
