@@ -1,6 +1,6 @@
-export * from "./models";
-import {OpenTriviaAPI} from "./api";
-import { QuestionQuery, Question } from "./models";
+export * from "./src/models";
+import {OpenTriviaAPI} from "./src/api";
+import { QuestionQuery, Question } from "./src/models";
 
 export class OpenTriviaClient {
 
