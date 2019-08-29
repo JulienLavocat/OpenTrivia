@@ -12,6 +12,7 @@ export class OpenTriviaAPI {
 	getQuestions(amount: number, params?: QuestionQuery) {
 		let query = toQuery(params);
 		query += "&amount=" + amount;
+		query += "&encode=base64";
 		return this.axios.get(`api.php${query}`);
 	}
 

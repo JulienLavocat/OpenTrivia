@@ -1,23 +1,24 @@
+import atob from "atob";
+
 export class Question {
 
 	readonly category: string;
-	readonly type: QuestionType;
-	readonly difficulty: Difficulty;
+	readonly type: string;
+	readonly difficulty: string;
 	readonly question: string;
 	readonly correctAnswer: string;
 	readonly incorrectAnswers: string[];
 	readonly propositions: string[];
 
 	constructor(obj: any) {
-		this.category = obj.category;
-		this.type = obj.type;
-		this.difficulty = obj.difficulty;
-		this.question = obj.question;
-		this.correctAnswer = obj.correct_answer;
-		this.incorrectAnswers = obj.incorrect_answers;
+		this.category = atob(obj.category);
+		this.type = atob(obj.type);
+		this.difficulty = atob(obj.difficulty);
+		this.question = atob(obj.question);
+		this.correctAnswer = atob(obj.correct_answer);
+		this.incorrectAnswers = obj.incorrect_answers.map((o: any) => atob(o));
 		this.propositions = shuffle([...this.incorrectAnswers, this.correctAnswer]);
 	}
-
 
 	isAnswerCorrect(answer: string) {
 		return answer && this.correctAnswer === answer;
